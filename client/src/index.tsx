@@ -1,10 +1,14 @@
-import ReactDom from "react-dom/client";
+import React from "react";
+import ReactDOM from "react-dom/client";
+import { BrowserRouter } from "react-router-dom";
 
-const rootNode = document.getElementById("root") as HTMLElement;
-const root = ReactDom.createRoot(rootNode);
+import App from "./App";
+
+const rootNode = document.getElementById( "root" ) as HTMLElement;
+const root = ReactDOM.createRoot( rootNode );
 
 root.render(
-  <>
-    <h1>Hello world!</h1>
-  </>
+  <BrowserRouter>
+    <App/>
+  </BrowserRouter>
 )
