@@ -21,37 +21,41 @@ const QuestionAnswerForm: React.FC = () => {
   };
 
   return (
-    <div className="container">
-      <h2>Question Answer Form</h2>
-      <form onSubmit={handleSubmit}>
-        <div className="mb-3">
-          <label htmlFor="context" className="form-label">Context:</label>
-          <input
-            type="text"
-            className="form-control"
-            id="context"
-            value={context}
-            onChange={(e) => setContext(e.target.value)}
-            placeholder="Enter context"
-            required
-          />
-        </div>
-        <div className="mb-3">
-          <label htmlFor="question" className="form-label">Question:</label>
-          <input
-            type="text"
-            className="form-control"
-            id="question"
-            value={question}
-            onChange={(e) => setQuestion(e.target.value)}
-            placeholder="Enter question"
-            required
-          />
-        </div>
-        <button type="submit" className="btn btn-primary">Submit</button>
-      </form>
-      {error && <p style={{ color: 'red' }}>{error}</p>}
-      {answer && <p>Answer: {answer}</p>}
+    <div className="container d-flex justify-content-center align-items-center vh-100">
+      <div className="card p-4" style={{ minWidth: '300px', maxWidth: '500px' }}>
+        <h2 className="text-center mb-4">Question Answer Form</h2>
+        <form onSubmit={handleSubmit}>
+          <div className="mb-3">
+            <label htmlFor="context" className="form-label">Context:</label>
+            <textarea
+              className="form-control"
+              id="context"
+              value={context}
+              onChange={(e) => setContext(e.target.value)}
+              placeholder="Enter context"
+              rows={5} // Set the number of rows to make it larger
+              required
+            />
+          </div>
+          <div className="mb-3">
+            <label htmlFor="question" className="form-label">Question:</label>
+            <input
+              type="text"
+              className="form-control"
+              id="question"
+              value={question}
+              onChange={(e) => setQuestion(e.target.value)}
+              placeholder="Enter question"
+              required
+            />
+          </div>
+          <div className="mb-3">
+            <button type="submit" className="btn btn-primary w-100">Submit</button>
+          </div>
+        </form>
+        {error && <p className="text-danger mt-3">{error}</p>}
+        {answer && <p className="mt-3">Answer: {answer}</p>}
+      </div>
     </div>
   );
 };
