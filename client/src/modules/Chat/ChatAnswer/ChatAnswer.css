@@ -1,0 +1,36 @@
+.chat .answerDiv {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 30px;
+}
+
+.chat .answerSubDiv {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 20px;
+}
+
+.chat .hrLine {
+  width: 800px;
+}
+
+.chat .answerContainer {
+  width: 800px;
+}
+
+.chat .question {
+  /* border: .5px solid #fff; */
+  padding: 25px;
+  margin-top: 10px;
+  background: #4169E1;
+  font-weight: bold;
+}
+
+.answer {
+  /* border: .5px solid #fff; */
+  padding: 30px 25px;
+  line-height: 1.5em;
+  background: #343536;
+}

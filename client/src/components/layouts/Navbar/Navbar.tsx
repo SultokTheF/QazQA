@@ -1,32 +1,67 @@
-import React from 'react';
+import React, { useState } from 'react'
+import './Navbar.css';
+
+import {AiFillCloseCircle} from 'react-icons/ai';
+import {TbGridDots} from 'react-icons/tb';
 
 const Navbar: React.FC = () => {
+  const userData = {
+    firstName: "Sultok",
+    lastName: "TheF",
+    role: "ADMIN"
+  }
+
+  const [active, setActive]  = useState('navBar')
+
+  const showNav = ()=>{
+    setActive('navBar activeNavbar')
+  }
+  const removeNav = ()=>{
+    setActive('navBar')
+  }
+
+  //code statement to add a background color to the header.
+  const [transparent, setTransparent] = useState('header')
+  const addBg = ()=>{
+    if(window.scrollY >= 10){
+    setTransparent('header activeHeader')
+    }else{
+    setTransparent('header')
+    }
+  }
+  window.addEventListener('scroll', addBg)
+
   return (
-    <nav className="navbar navbar-expand-lg navbar-dark bg-dark">
-      <div className="container-fluid">
-        <a className="navbar-brand" href="#">QazQa</a>
-        <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-          <span className="navbar-toggler-icon"></span>
-        </button>
-        <div className="collapse navbar-collapse justify-content-end" id="navbarNav">
-          <ul className="navbar-nav">
-            <li className="nav-item">
-              <a className="nav-link" aria-current="page" href="#">Home</a>
+    <section className='navBarSection'>
+      <header className={transparent}>
+
+        <div className="logoDiv">
+          <a href="/" className="logo flex"><h1>AI.AstanaIT</h1></a>
+       </div>
+
+        <div className={active}>
+          <ul onClick={removeNav} className="navLists flex">
+            <li className="navItem">
+              <a href="/#main" className="navLink">Басты</a>
             </li>
-            <li className="nav-item">
-              <a className="nav-link" href="#">Features</a>
+            <li className="navItem">
+              <a href="/#about" className="navLink">Біз туралы</a>
             </li>
-            <li className="nav-item">
-              <a className="nav-link" href="#">About</a>
-            </li>
-            <li className="nav-item">
-              <a className="nav-link" href="#">Contact</a>
+            <li className="navItem">
+              <a href="/#contact" className="navLink">Байланыс</a>
             </li>
           </ul>
+          <div onClick={removeNav} className="closeNavbar">
+            <AiFillCloseCircle className='icon'/>
+          </div>
         </div>
-      </div>
-    </nav>
-  );
-};
 
-export default Navbar;
+        <div onClick={showNav} className="toggleNavbar">
+          <TbGridDots className='icon'/>
+        </div>
+      </header>
+    </section>
+  )
+}
+
+export default Navbar

@@ -1,0 +1,19 @@
+.chat .chat-header {
+  /* margin-top: 5vh; */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+}
+
+.chat .headerSubDiv {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 50%;
+}
+
+.chat .headerSubText {
+  text-align: center;
+}
