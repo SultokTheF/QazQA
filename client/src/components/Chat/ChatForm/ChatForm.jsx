@@ -1,21 +1,15 @@
-// ChatForm.tsx
-import React, { useState, ChangeEvent } from "react";
-import axios from "axios";
+import { useState } from "react";
 import "./ChatForm.css";
 
-interface ChatFormProps {
-  onGenerateResponse: (context: string, question: string) => void;
-}
+const ChatForm = ({ onGenerateResponse }) => {
+  const [context, setContext] = useState("");
+  const [question, setQuestion] = useState("");
 
-const ChatForm: React.FC<ChatFormProps> = ({ onGenerateResponse }) => {
-  const [context, setContext] = useState<string>("");
-  const [question, setQuestion] = useState<string>("");
-
-  const handleContextChange = (e: ChangeEvent<HTMLTextAreaElement>) => {
+  const handleContextChange = (e) => {
     setContext(e.target.value);
   };
 
-  const handleQuestionChange = (e: ChangeEvent<HTMLInputElement>) => {
+  const handleQuestionChange = (e) => {
     setQuestion(e.target.value);
   };
 

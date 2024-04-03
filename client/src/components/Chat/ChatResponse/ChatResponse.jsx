@@ -1,21 +1,11 @@
-// ChatAnswer.tsx
 import React from 'react';
-import "./ChatAnswer.css";
+import "./ChatResponse.css";
 
-import { Loader } from '../../../components/UI';
-
-interface ChatAnswerProps {
-  context: string;
-  question: string;
-  answer: string;
-  loading: boolean;
-}
-
-const ChatAnswer: React.FC<ChatAnswerProps> = ({ context, question, answer, loading }) => {
+const ChatResponse = ({ question, answer, loading = false }) => {
   return (
     <>
       {loading ? (
-        <Loader />
+        <div>Loading...</div>
       ) : (
         <>
           {answer && (
@@ -37,4 +27,4 @@ const ChatAnswer: React.FC<ChatAnswerProps> = ({ context, question, answer, load
   );
 };
 
-export default ChatAnswer;
+export default ChatResponse;
