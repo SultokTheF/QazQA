@@ -1,0 +1,29 @@
+.chat-conversations {
+  border: 1px solid #DADADB;
+  border-radius: 5px;
+  padding: 10px;
+  height: 100%;
+  overflow-y: auto; /* Enable vertical scrolling if content overflows */
+}
+
+.conversations-container {
+  display: flex;
+  flex-direction: column;
+}
+
+.conversation {
+  margin-bottom: 10px;
+  padding: 10px;
+  border-radius: 5px;
+  color: #DADADB;
+}
+
+.conversation-section {
+  border: 1px solid #4169E1;
+  margin-bottom: 5px;
+}
+
+.conversation-context {
+  font-size: 14px;
+  color: #DADADB;
+}

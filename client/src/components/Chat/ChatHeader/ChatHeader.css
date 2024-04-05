@@ -6,13 +6,13 @@
   width: 100%;
 }
 
-.chat .headerSubDiv {
+.chat .header-sub-div {
   display: flex;
   flex-direction: column;
   align-items: center;
   width: 50%;
 }
 
-.chat .headerSubText {
+.chat .header-sub-text {
   text-align: center;
 }

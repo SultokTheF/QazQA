@@ -1,7 +1,7 @@
 import { useState } from "react";
 import "./ChatForm.css";
 
-const ChatForm = ({ onGenerateResponse }) => {
+export default function({ onGenerateResponse }) {
   const [context, setContext] = useState("");
   const [question, setQuestion] = useState("");
 
@@ -18,17 +18,17 @@ const ChatForm = ({ onGenerateResponse }) => {
   };
 
   return (
-    <div className="formDiv">
+    <div className="chat-form">
       <textarea
         rows={10}
-        className="formControl"
+        className="form-input"
         placeholder="Контекст..."
         value={context}
         onChange={handleContextChange}
       ></textarea>
       <input 
         type="text"
-        className="formControl form-question"
+        className="form-input form-question"
         placeholder="Маған сұрақ қойыңыз"
         value={question}
         onChange={handleQuestionChange}
@@ -36,12 +36,10 @@ const ChatForm = ({ onGenerateResponse }) => {
       <br />
       <button
         onClick={handleClick}
-        className="formBtn"
+        className="form-button"
       >
         Жауап
       </button>
     </div>
   );
 };
-
-export default ChatForm;
