@@ -33,18 +33,6 @@ export default function() {
 
   return (
     <>
-      {/* <div className="chat">
-        <div className="row">
-          <div className="col-4">
-            <ChatConversations />
-          </div>
-          <div className="col-8">
-            <ChatHeader />
-            <ChatForm onGenerateResponse={handleGenerateResponse} />
-            <ChatResponse context={context} question={question} answer={answer} loading={loading} />
-          </div>
-        </div>
-      </div> */}
       <div className="chat">
         <ChatHeader />
         <ChatForm onGenerateResponse={handleGenerateResponse} />
