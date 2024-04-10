@@ -1,4 +1,4 @@
-.formDiv {
+.chat-form {
   display: flex;
   flex-direction: column;
   margin-top: 10px;
@@ -6,7 +6,7 @@
   justify-content: center;
 }
 
-.formControl {
+.form-input {
   flex-grow: 1;
   border: 1px solid #ccc;
   border-radius: 4px;
@@ -14,7 +14,7 @@
   width: 800px;
 }
 
-.chat .formControl:focus {
+.chat .form-input:focus {
   border-left: 2px solid #000;
   border-top: 2px solid #000;
   border-top-left-radius: 0%;
@@ -22,7 +22,7 @@
   border-top-right-radius: 0%;
 }
 
-.chat .formBtn {
+.chat .form-button {
   margin-left: 10px;
   background-color: #007bff;
   color: #fff;
@@ -33,14 +33,11 @@
   margin-top: 10px;
   width: 300px;
   background: #4169E1;
+  transition: background-color 0.3s ease;
 }
 
-.chat .formBtn:hover {
-  border-left: 5px solid #fff;
-  border-top: 5px solid #fff;
-  border-top-left-radius: 0%;
-  border-bottom-left-radius: 0%;
-  border-top-right-radius: 0%;
+.chat .form-button:hover {
+  background-color: #08509e;
 }
 
 .chat .form-question {

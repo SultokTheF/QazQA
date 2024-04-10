@@ -1,0 +1,32 @@
+/* Chat.css */
+
+.chat {
+  padding: 50px;
+  font-family: 'Work Sans', sans-serif;
+  color: #dadadb;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh; /* Height of 100% of the viewport */
+}
+
+.chat-content {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  width: 100%;
+  max-width: 1200px; /* Adjust as needed */
+  height: 100%; /* Height of 100% of the parent container (.chat) */
+}
+
+.chat-main {
+  flex: 1;
+  margin-right: 20px; /* Adjust as needed */
+}
+
+.chat-sidebar {
+  margin: 0;
+  width: 300px; /* Adjust as needed */
+}

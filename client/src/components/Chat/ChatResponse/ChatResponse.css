@@ -1,35 +1,33 @@
-.chat .answerDiv {
+.chat .chat-response {
   display: flex;
   flex-direction: column;
   align-items: center;
   margin: 30px;
 }
 
-.chat .answerSubDiv {
+.chat .response-div {
   display: flex;
   flex-direction: column;
   align-items: center;
   margin: 20px;
 }
 
-.chat .hrLine {
+.chat .hr-line {
   width: 800px;
 }
 
-.chat .answerContainer {
+.chat .response-container {
   width: 800px;
 }
 
-.chat .question {
-  /* border: .5px solid #fff; */
+.chat .response-question {
   padding: 25px;
   margin-top: 10px;
   background: #4169E1;
   font-weight: bold;
 }
 
-.answer {
-  /* border: .5px solid #fff; */
+.response-answer {
   padding: 30px 25px;
   line-height: 1.5em;
   background: #343536;

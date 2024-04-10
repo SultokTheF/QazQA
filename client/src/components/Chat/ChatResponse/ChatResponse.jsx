@@ -1,30 +1,21 @@
-import React from 'react';
 import "./ChatResponse.css";
 
-const ChatResponse = ({ question, answer, loading = false }) => {
+export default function ChatResponse({ question, answer }) {
   return (
     <>
-      {loading ? (
-        <div>Loading...</div>
-      ) : (
-        <>
-          {answer && (
-            <div className="answerDiv">
-              <div className="answerSubDiv">
-                <hr className="hrLine" />
-                <div className="answerContainer">
-                  <div className="answerSection" key={1}>
-                    <p className="question">{question}</p>
-                    <p className="answer">{answer}</p>
-                  </div>
-                </div>
+      {answer && (
+        <div className="chat-response">
+          <div className="response-div">
+            <hr className="hr-line" />
+            <div className="response-container">
+              <div className="response-section" key={1}>
+                <p className="response-question">{question}</p>
+                <p className="response-answer">{answer}</p>
               </div>
             </div>
-          )}
-        </>
+          </div>
+        </div>
       )}
     </>
   );
 };
-
-export default ChatResponse;
